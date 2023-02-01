@@ -42,7 +42,6 @@ export default function HomeScreen({ navigation }) {
                 <Button
                     title="History"
                     onPress={() => {
-                        /* 1. Navigate to the Details route with params */
                         navigation.navigate('History', history);
                     }}
                 />
