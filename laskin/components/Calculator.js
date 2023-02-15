@@ -7,7 +7,6 @@ export default function HomeScreen({ navigation }) {
     const [number2, setNumber2] = useState(0);
     const [result, setResult] = useState(0);
     const [history, setHistory] = useState([""]);
-    const [hello, setHello] = useState("Jeee")
 
     const plus = () => {
         const newResult = number1 + number2
