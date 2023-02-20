@@ -14,8 +14,13 @@ export default function Search() {
             await fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=zCWTf85UBDbU4NNhtELW1n4rqpX5O5pj&location=${input}`)
                 .then(response => response.json())
                 .then(data => {
-                    setAddress(data.results[0].locations[0].street)
                     setValues(Object.values(data.results[0].locations[0].displayLatLng))
+                    if (data.results[0].locations[0].street === "") {
+                        setAddress(data.results[0].locations[0].adminArea5)
+                    } else {
+                        setAddress(data.results[0].locations[0].street)
+                    }
+
                 })
                 .catch(err => console.log(err))
         } else {
