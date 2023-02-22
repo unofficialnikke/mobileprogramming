@@ -15,9 +15,15 @@ export const styles = StyleSheet.create({
         width: 400,
         borderBottomColor: "grey",
         borderBottomWidth: 1,
-        textAlign: "center"
+        textAlign: "center",
     },
     space: {
         height: 5
     },
+    button: {
+        width: "100%",
+        height: "30%",
+        justifyContent: "center",
+        alignItems: "center"
+    }
 });
